@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
+
+:root[data-theme="light"] {
+  --text: #06281a;
+  --background: #ffffff;
+  --background-secondary: #e0e0e0;
+  --background-spotlight: #d8ffef;
+  --primary: #87eec3;
+  --secondary: #bcf5dd;
+  --accent: #1dc981;
+  --accent-blue: #3472de;
+  --accent-green: #1f9d00;
+  --accent-purple: #7d38d0;
+  --accent-blue-light: #70a4fc;
+  --accent-green-light: #94ff79;
+  --accent-light: #81ffcb;
+  --spotlight-width: "20%";
+}
+:root[data-theme="dark"] {
+  --text: #d7f9eb;
+  --background: #000000;
+  --background-secondary: #131313;
+  --background-spotlight: #051a12;
+  --primary: #11784d;
+  --secondary: #0a432b;
+  --accent: #36e29b;
+  --accent-blue: #34e2fc;
+  --accent-green: #41db1b;
+  --accent-purple: #ba36e2;
+  --accent-blue-light: #34e2fc;
+  --accent-green-light: #41db1b;
+  --accent-light: #36e29b;
+  --spotlight-width: "50%";
+}
+
+body {
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, a {
+  font-family: 'Poppins';
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+  transition-property: color;
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 1000px) {
+  html {font-size: 100%;} /* 16px */
+
+  h1 {font-size: 4.210rem; /* 67.36px */}
+  
+  h2 {font-size: 3.158rem; /* 50.56px */}
+  
+  h3 {font-size: 2.369rem; /* 37.92px */}
+  
+  h4 {font-size: 1.777rem; /* 28.48px */}
+  
+  h5 {font-size: 1.333rem; /* 21.28px */}
+  
+  small {font-size: 0.750rem; /* 12px */}
+}
+
+@media screen and (max-width: 1000px) {
+  html {font-size: 100%;} /* 16px */
+
+  h1 {font-size: 3.15rem; /* 67.36px */}
+  
+  h2 {font-size: 2.36rem; /* 50.56px */}
+  
+  h3 {font-size: 1.77rem; /* 37.92px */}
+  
+  h4 {font-size: 1.33rem; /* 28.48px */}
+  
+  h5 {font-size: 1rem; /* 21.28px */}
+  
+  small {font-size: 0.750rem; /* 12px */}
+}
+
+main,
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.text {
+  font-family: "Poppins";
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}

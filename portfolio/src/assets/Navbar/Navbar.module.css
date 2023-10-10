@@ -1,0 +1,88 @@
+.container {
+  width: 100%;
+  background: linear-gradient(var(--background) 0%, transparent 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+}
+
+.logo {
+  background: -webkit-linear-gradient(
+    0deg,
+    var(--accent),
+    var(--accent-blue-light)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.themeBtn {
+  background-color: transparent;
+  outline: none;
+  border: 2px solid var(--text);
+  border-radius: 0.5rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+  .btnContent {
+    font-size: 2rem;
+    padding: 0.7rem;
+  }
+  .pageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+  }
+  .logo {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .btnContent {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  .pageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    padding-right: 1.5rem;
+  }
+  .logo {
+    padding: 1.5rem;
+  }
+}
+
+.themeBtn:hover {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  transition: color border;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.page {
+  color: var(--text);
+  padding: 1rem;
+}
+
+.page:hover {
+  color: var(--accent);
+  transition-duration: color;
+  transition: 0.3s;
+}
