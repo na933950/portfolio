@@ -1,5 +1,6 @@
 import Coursework from "./Coursework";
 import styles from "./Education.module.css";
+import { ucb } from "../../Images";
 
 const Education = () => {
   return (
@@ -23,13 +24,13 @@ const Education = () => {
           </p>
           <p>
             I also belong to the wonderful organization{" "}
-            <a href="">Political Computer Science @ Berkeley</a> where I can explore
-            my interest in public policy. I am also the <g>Education Chair</g>{" "}
-            and am responsible for planning workshops!
+            <a href="">Political Computer Science @ Berkeley</a> where I can
+            explore my interest in public policy. I am also the{" "}
+            <g>Education Chair</g> and am responsible for planning workshops!
           </p>
         </div>
         <div className={styles.imgContainer}>
-          <img src="../../../public/ucb_logo.png" />
+          <img src={ucb} />
         </div>
       </div>
       <Coursework />

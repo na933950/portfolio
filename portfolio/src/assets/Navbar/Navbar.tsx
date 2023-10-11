@@ -11,9 +11,10 @@ interface Props {
   pages: Page[];
   theme: string;
   setTheme: (s: string) => void;
+  scrollToLanding: () => void;
 }
 
-const Navbar = ({ pages, theme, setTheme }: Props) => {
+const Navbar = ({ pages, theme, setTheme, scrollToLanding }: Props) => {
   const handleThemeChange = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
@@ -40,7 +41,7 @@ const Navbar = ({ pages, theme, setTheme }: Props) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.logoContainer}>
+      <div className={styles.logoContainer} onClick={scrollToLanding}>
         <h2 className={styles.logo}>NA</h2>
       </div>
       {breakpoint < pageWidth ? null : mobileNav}

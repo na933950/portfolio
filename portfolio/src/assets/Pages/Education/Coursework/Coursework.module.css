@@ -38,6 +38,7 @@
     border: 1px var(--border) solid;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
     flex: 1;
     transition: 0.2s;

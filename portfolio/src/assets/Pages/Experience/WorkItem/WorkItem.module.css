@@ -1,0 +1,145 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  transition: 0.2s;
+  opacity: 0.9;
+}
+
+.allContainer:hover {
+    opacity: var(--hover-opacity);
+    background-color: var(--background-third);
+}
+
+.logo {
+    filter: var(--link-health-logo-filter);
+}
+
+@media screen and (min-width: 1200px) {
+  .allContainer {
+    background-color: var(--background-secondary);
+    border-radius: 0.5rem;
+    border: 1px var(--border) solid;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex: 1;
+    transition: 0.2s;
+    opacity: 0.9;
+    padding: 2rem;
+  }
+  .techContainer {
+    border-left: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .allContainer {
+    background-color: var(--background-secondary);
+    border-radius: 0.5rem;
+    border: 1px var(--border) solid;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    transition: 0.2s;
+    opacity: 0.9;
+    padding: 2rem;
+  }
+  .techContainer {
+    border-top: 2px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  .row {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .logoContainer {
+    max-width: 100%;
+  }
+  .infoContainer {
+    padding: 0;
+  }
+  .titleLeft {
+    font-size: 0.9rem;
+  }
+  .titleRight {
+    font-size: 0.9rem;
+  }
+  .tech {
+    padding: 0.5rem;
+    color: var(--text);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .logoContainer {
+    max-width: 15%;
+  }
+  .infoContainer {
+    padding-left: 3rem;
+    padding-right: 1rem;
+  }
+  .tech {
+    padding: 1rem;
+    color: var(--text);
+  }
+}
+
+.topContainer {
+  display: flex;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.7;
+}
+
+.titleRight {
+    text-align: right;
+}
+
+.row h6 {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.row h5 {
+  color: var(--accent-blue);
+}
+
+.singleTechContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoContainer img {
+  width: 100%;
+}
+
+.descriptionContainer {
+  line-height: 1.7;
+}

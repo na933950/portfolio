@@ -19,6 +19,7 @@
   --shadow: rgb(192, 192, 192);
   --border: #c2c2c2;
   --hover-opacity: 1;
+  --link-health-logo-filter: none;
 }
 :root[data-theme="dark"] {
   --text: #d7f9eb;
@@ -35,10 +36,11 @@
   --accent-blue-light: #34e2fc;
   --accent-green-light: #41db1b;
   --accent-light: #36e29b;
-  --spotlight-width: "50%";
+  --spotlight-width: "20%";
   --shadow: var(--background-secondary);
   --border: #383838;
   --hover-opacity: 0.8;
+  --link-health-logo-filter: invert(100%) sepia(10%) hue-rotate(180deg);
 }
 
 body {
@@ -51,6 +53,8 @@ h1, h2, h3, h4, h5, a {
   font-family: 'Poppins';
   font-weight: 700;
   text-decoration: none;
+  transition-property: color;
+  transition: 0.2s;
 }
 
 h4, h5, a {
@@ -83,7 +87,7 @@ h3 {
 a:hover {
   color: var(--accent);
   transition-property: color;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 @media screen and (min-width: 1000px) {

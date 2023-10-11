@@ -124,3 +124,7 @@
   transition-property: color;
   transition: 0.3s;
 }
+
+.logoContainer:hover {
+  cursor: pointer;
+}

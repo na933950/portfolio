@@ -5,6 +5,7 @@ import Navbar from "./assets/Navbar";
 import Landing from "./assets/Pages/Landing";
 import About from "./assets/Pages/About";
 import Education from "./assets/Pages/Education";
+import Experience from "./assets/Pages/Experience";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -12,6 +13,16 @@ function App() {
   const [mouseY, setMouseY] = useState(0);
   const aboutRef = useRef<HTMLDivElement>(null);
   const educationRef = useRef<HTMLDivElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
+  const landingRef = useRef<HTMLDivElement>(null);
+  const scrollToLanding = () => {
+    if (landingRef.current) {
+      window.scrollTo({
+        top: landingRef.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
   const scrollToAbout = () => {
     if (aboutRef.current) {
       window.scrollTo({
@@ -25,14 +36,22 @@ function App() {
       window.scrollTo({
         top: educationRef.current.offsetTop,
         behavior: "smooth",
-      })
+      });
     }
-  }
+  };
+  const scrollToExperience = () => {
+    if (experienceRef.current) {
+      window.scrollTo({
+        top: experienceRef.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
 
   const pages = [
     { page: "About", scroll: scrollToAbout },
     { page: "Education", scroll: scrollToEducation },
-    { page: "Experience", scroll: scrollToAbout },
+    { page: "Experience", scroll: scrollToExperience },
     { page: "Projects", scroll: scrollToAbout },
   ];
 
@@ -54,16 +73,21 @@ function App() {
         }% 
     ${
       (mouseY / document.body.scrollHeight) * 100
-    }%, var(--background-spotlight) 0%, transparent 40%`,
+    }%, var(--background-spotlight) 0%, transparent 10%`,
       }}
     >
-      <Navbar pages={pages} theme={theme} setTheme={setTheme} />
+      <div ref={landingRef}>
+        <Navbar pages={pages} theme={theme} setTheme={setTheme} scrollToLanding={scrollToLanding}/>
+      </div>
       <Landing scrollToAbout={scrollToAbout}></Landing>
       <div ref={aboutRef}>
         <About />
       </div>
       <div ref={educationRef}>
         <Education />
+      </div>
+      <div ref={experienceRef}>
+        <Experience />
       </div>
     </div>
   );
