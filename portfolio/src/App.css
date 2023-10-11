@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
 
 :root[data-theme="light"] {
-  --text: #06281a;
+  --text: #002516;
   --background: #ffffff;
-  --background-secondary: #e0e0e0;
-  --background-spotlight: #d8ffef;
+  --background-secondary: #ffffff;
+  --background-third:#f0f0f0;
+  --background-spotlight: #e4fff4;
   --primary: #87eec3;
   --secondary: #bcf5dd;
   --accent: #1dc981;
@@ -15,12 +16,16 @@
   --accent-green-light: #94ff79;
   --accent-light: #81ffcb;
   --spotlight-width: "20%";
+  --shadow: rgb(192, 192, 192);
+  --border: #c2c2c2;
+  --hover-opacity: 1;
 }
 :root[data-theme="dark"] {
   --text: #d7f9eb;
   --background: #000000;
-  --background-secondary: #131313;
-  --background-spotlight: #051a12;
+  --background-secondary: #1f1f1f;
+  --background-third: #2b2b2b;
+  --background-spotlight: #051f15;
   --primary: #11784d;
   --secondary: #0a432b;
   --accent: #36e29b;
@@ -31,18 +36,43 @@
   --accent-green-light: #41db1b;
   --accent-light: #36e29b;
   --spotlight-width: "50%";
+  --shadow: var(--background-secondary);
+  --border: #383838;
+  --hover-opacity: 0.8;
 }
 
 body {
   font-family: 'Poppins';
   font-weight: 400;
+  transition: 0.2s;
 }
 
 h1, h2, h3, h4, h5, a {
   font-family: 'Poppins';
   font-weight: 700;
-  color: var(--text);
   text-decoration: none;
+}
+
+h4, h5, a {
+  color: var(--text);
+}
+
+g {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+b {
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+h1, h2 {
+  color: var(--accent-blue);
+}
+
+h3 {
+  color: var(--accent);
 }
 
 a:hover {
@@ -89,11 +119,21 @@ body {
   color: var(--text);
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .text {
   font-family: "Poppins";
 }
 
 .container {
   width: 100%;
-  height: 100vh;
 }

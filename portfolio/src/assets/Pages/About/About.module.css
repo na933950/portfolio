@@ -1,60 +1,30 @@
-.container {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+@media screen and (max-width: 800px) {
+    .container {
+        background-color: transparent;
+        position: relative;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
 
-.summaryContainer {
-  height: 100%;
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 800px) {
+    .container {
+        background-color: transparent;
+        position: relative;
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
 
-@media screen and (min-width: 1000px) {
-  .auxillaryContainer {
-    padding-left: 8rem;
-  }
+
+.paragraph {
+    line-height: 1.7;
 }
 
-@media screen and (max-width: 1000px) {
-  .auxillaryContainer {
-    padding-left: 5rem;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .summaryContainer {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .auxillaryContainer {
-    padding-left: 0;
-    width: 90%;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .summaryContainer {
-    width: 50%;
-  }
-}
-
-.auxillaryContainer {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.title {
-  color: var(--accent);
-}
-
-.roles {
-  display: flex;
-  flex-direction: row;
+.techStack {
+    padding-top: 2rem;
 }

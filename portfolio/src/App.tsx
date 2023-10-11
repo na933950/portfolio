@@ -1,32 +1,59 @@
-import { useEffect, useState } from 'react'
-import './reset.css';
-import './App.css'
-import Navbar from './assets/Navbar';
-import About from './assets/Pages/About';
+import { useEffect, useRef, useState } from "react";
+import "./reset.css";
+import "./App.css";
+import Navbar from "./assets/Navbar";
+import Landing from "./assets/Pages/Landing";
+import About from "./assets/Pages/About";
 
 function App() {
-  const [theme, setTheme] = useState('dark');
-  const pages = ["About", "Education", "Projects", "Experience"]
+  const [theme, setTheme] = useState("dark");
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const scrollToAbout = () => {
+    if (aboutRef.current) {
+      window.scrollTo({
+        top: aboutRef.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
 
-  window.addEventListener('mousemove', (event: MouseEvent) => {
+  const pages = [
+    { page: "About", scroll: scrollToAbout },
+    { page: "Education", scroll: scrollToAbout },
+    { page: "Experience", scroll: scrollToAbout },
+    { page: "Projects", scroll: scrollToAbout },
+  ];
+
+  window.addEventListener("mousemove", (event: MouseEvent) => {
     setMouseX(event.pageX);
     setMouseY(event.pageY);
-  })
+  });
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
   return (
-    <div className="container" style={{backgroundImage: `radial-gradient(circle at ${mouseX / window.innerWidth * 100}% 
-    ${mouseY / window.innerHeight * 100}%, var(--background-spotlight) 0%, transparent 40%`
-  }}>
-      <Navbar pages={pages} theme={theme} setTheme={setTheme}/>
-      <About></About>
+    <div
+      className="container"
+      style={{
+        backgroundImage: `radial-gradient(circle at ${
+          (mouseX / window.innerWidth) * 100
+        }% 
+    ${
+      (mouseY / document.body.scrollHeight) * 100
+    }%, var(--background-spotlight) 0%, transparent 40%`,
+      }}
+    >
+      <Navbar pages={pages} theme={theme} setTheme={setTheme} />
+      <Landing scrollToAbout={scrollToAbout}></Landing>
+      <div ref={aboutRef}>
+        <About></About>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
