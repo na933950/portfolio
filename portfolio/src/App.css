@@ -3,11 +3,11 @@
 :root[data-theme="light"] {
   --text: #002516;
   --background: #ffffff;
-  --background-secondary: #ffffff;
-  --background-third:#f0f0f0;
+  --background-secondary: #e7e7e7;
+  --background-third:#dbdbdb;
   --background-spotlight: #e4fff4;
   --primary: #87eec3;
-  --secondary: #bcf5dd;
+  --secondary: #9adfc2;
   --accent: #1dc981;
   --accent-blue: #3472de;
   --accent-green: #1f9d00;
@@ -25,7 +25,7 @@
   --background: #000000;
   --background-secondary: #1f1f1f;
   --background-third: #2b2b2b;
-  --background-spotlight: #051f15;
+  --background-spotlight: #03160f;
   --primary: #11784d;
   --secondary: #0a432b;
   --accent: #36e29b;
@@ -64,6 +64,11 @@ g {
 
 b {
   color: var(--accent-blue);
+  font-weight: 700;
+}
+
+pr {
+  color: var(--accent-purple);
   font-weight: 700;
 }
 

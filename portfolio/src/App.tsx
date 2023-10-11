@@ -4,12 +4,14 @@ import "./App.css";
 import Navbar from "./assets/Navbar";
 import Landing from "./assets/Pages/Landing";
 import About from "./assets/Pages/About";
+import Education from "./assets/Pages/Education";
 
 function App() {
   const [theme, setTheme] = useState("dark");
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const educationRef = useRef<HTMLDivElement>(null);
   const scrollToAbout = () => {
     if (aboutRef.current) {
       window.scrollTo({
@@ -18,10 +20,18 @@ function App() {
       });
     }
   };
+  const scrollToEducation = () => {
+    if (educationRef.current) {
+      window.scrollTo({
+        top: educationRef.current.offsetTop,
+        behavior: "smooth",
+      })
+    }
+  }
 
   const pages = [
     { page: "About", scroll: scrollToAbout },
-    { page: "Education", scroll: scrollToAbout },
+    { page: "Education", scroll: scrollToEducation },
     { page: "Experience", scroll: scrollToAbout },
     { page: "Projects", scroll: scrollToAbout },
   ];
@@ -50,7 +60,10 @@ function App() {
       <Navbar pages={pages} theme={theme} setTheme={setTheme} />
       <Landing scrollToAbout={scrollToAbout}></Landing>
       <div ref={aboutRef}>
-        <About></About>
+        <About />
+      </div>
+      <div ref={educationRef}>
+        <Education />
       </div>
     </div>
   );
