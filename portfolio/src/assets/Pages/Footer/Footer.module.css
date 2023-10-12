@@ -1,0 +1,69 @@
+@media screen and (max-width: 800px) {
+    .container {
+      background-color: transparent;
+      position: relative;
+      padding: 2rem;
+      padding-bottom: 6rem;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: space-evenly;
+    }
+  }
+  
+  @media screen and (min-width: 800px) {
+    .container {
+      background-color: transparent;
+      position: relative;
+      padding: 5rem;
+      padding-bottom: 12rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: space-evenly;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .container {
+        flex-direction: column;
+    }
+  }
+
+.linksContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.link {
+    padding-right: 1rem;
+}
+
+.personalContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.page {
+    transition-property: color;
+    transition: 0.2s;
+}
+
+.link:hover, .page:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.personalContainer h5:hover {
+    cursor: pointer;
+}
+
+.personalContainer a {
+    font-weight: 400;
+    text-decoration: underline;
+}

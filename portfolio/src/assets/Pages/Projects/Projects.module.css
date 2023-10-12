@@ -1,0 +1,96 @@
+@media screen and (max-width: 800px) {
+  .container {
+    background-color: transparent;
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    background-color: transparent;
+    position: relative;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+    .rowOne {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 2rem;
+        height: 100%;
+      }
+      
+      .rowTwo {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 2rem;
+        height: 100%;
+      }
+      .grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+      }
+}
+
+@media screen and (max-width: 1050px) and (min-width: 700px) {
+    .rowOne {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        height: 100%;
+      }
+      
+      .rowTwo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        height: 100%;
+      }
+      .grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+      }
+}
+
+@media screen and (max-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 2rem;
+    }
+    .rowOne {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        height: 100%;
+      }
+      
+      .rowTwo {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        height: 100%;
+      }
+}
+
+.project {
+  border: 1px solid var(--border);
+}
+
+.container {
+  line-height: 1.7;
+}
+
+.text {
+  background-color: var(--background-secondary);
+}

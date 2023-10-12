@@ -3,6 +3,9 @@ import styles from "./Landing.module.css";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import MagicCard from "../../MagicCard";
 import { PiArrowFatLinesDownFill } from "react-icons/pi";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiFileText } from "react-icons/fi";
+import resume from "../../resume.pdf";
 
 interface Props {
   scrollToAbout: () => void;
@@ -59,6 +62,11 @@ const Landing = ({ scrollToAbout }: Props) => {
               {text}
               <Cursor></Cursor>
             </h2>
+            <div className={styles.linksContainer}>
+              <a href="https://www.github.com/na933950" target="blank"><h4 className={styles.link}><FaGithub /></h4></a>
+              <a href="https://www.linkedin.com/in/noah-abji-418b7321b/" target="blank"><h4 className={styles.link}><FaLinkedin /></h4></a>
+              <a href={resume} target="blank"><h4 className={styles.link}><FiFileText /></h4></a>
+            </div>
           </div>
         </div>
         {breakpoint < screenWidth ? <MagicCard></MagicCard> : null}
