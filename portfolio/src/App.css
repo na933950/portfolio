@@ -5,7 +5,7 @@
   --background: #ffffff;
   --background-secondary: #e7e7e7;
   --background-third:#dbdbdb;
-  --background-spotlight: #e4fff4;
+  --background-spotlight: #ffffff;
   --primary: #87eec3;
   --secondary: #9adfc2;
   --accent: #1dc981;
@@ -41,6 +41,8 @@
   --border: #383838;
   --hover-opacity: 0.8;
   --link-health-logo-filter: invert(100%) sepia(10%) hue-rotate(180deg);
+  --submit-hover: #424242;
+  --submit-hover-color: #ffffff;
 }
 
 body {

@@ -8,6 +8,7 @@ import Education from "./assets/Pages/Education";
 import Experience from "./assets/Pages/Experience";
 import Projects from "./assets/Pages/Projects";
 import Footer from "./assets/Pages/Footer";
+import ContactForm from "./assets/ContactForm";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -19,6 +20,7 @@ function App() {
   const experienceRef = useRef<HTMLDivElement>(null);
   const landingRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
   const breakpoint = 600;
 
   const scrollToLanding = () => {
@@ -58,19 +60,27 @@ function App() {
       window.scrollTo({
         top: projectsRef.current.offsetTop,
         behavior: "smooth",
-      })
+      });
     }
-  }
-  window.addEventListener('resize', () => {
+  };
+  const scrollToContact = () => {
+    if (contactRef.current) {
+      window.scrollTo({
+        top: contactRef.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+  window.addEventListener("resize", () => {
     setPageWidth(window.innerWidth);
-  })
-
+  });
 
   const pages = [
     { page: "About", scroll: scrollToAbout },
     { page: "Education", scroll: scrollToEducation },
     { page: "Experience", scroll: scrollToExperience },
     { page: "Projects", scroll: scrollToProjects },
+    { page: "Contact", scroll: scrollToContact },
   ];
 
   window.addEventListener("mousemove", (event: MouseEvent) => {
@@ -85,17 +95,26 @@ function App() {
   return (
     <div
       className="container"
-      style={pageWidth > breakpoint? {
-        backgroundImage: `radial-gradient(circle at ${
-          (mouseX / window.innerWidth) * 100
-        }% 
+      style={
+        pageWidth > breakpoint
+          ? {
+              backgroundImage: `radial-gradient(circle at ${
+                (mouseX / window.innerWidth) * 100
+              }% 
     ${
       (mouseY / document.body.scrollHeight) * 100
     }%, var(--background-spotlight) 0%, transparent 10%`,
-      } : {}}
+            }
+          : {}
+      }
     >
       <div ref={landingRef}>
-        <Navbar pages={pages} theme={theme} setTheme={setTheme} scrollToLanding={scrollToLanding}/>
+        <Navbar
+          pages={pages}
+          theme={theme}
+          setTheme={setTheme}
+          scrollToLanding={scrollToLanding}
+        />
       </div>
       <Landing scrollToAbout={scrollToAbout}></Landing>
       <div ref={aboutRef}>
@@ -110,7 +129,10 @@ function App() {
       <div ref={projectsRef}>
         <Projects />
       </div>
-      <Footer pages={pages} scrollTop={scrollToLanding}/>
+      <div ref={contactRef}>
+        <ContactForm />
+      </div>
+      <Footer pages={pages} scrollTop={scrollToLanding} />
     </div>
   );
 }

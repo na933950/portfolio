@@ -25,7 +25,7 @@ const Navbar = ({ pages, theme, setTheme, scrollToLanding }: Props) => {
     setPageWidth(window.innerWidth);
   };
 
-  const breakpoint = 680;
+  const breakpoint = 800;
 
   window.addEventListener("resize", handleResize);
 
