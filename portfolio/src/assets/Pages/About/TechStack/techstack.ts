@@ -9,7 +9,6 @@ import {
 import {
   SiJavascript,
   SiTypescript,
-  SiSvelte,
   SiExpress,
   SiMongodb,
   SiPostgresql,
@@ -36,7 +35,6 @@ export const languages = [
 
 export const webdev = [
   { comp: FaReact(), name: "ReactJS" },
-  { comp: SiSvelte(), name: "Svelte" },
   { comp: FaHtml5(), name: "HTML5" },
   { comp: FaCss3Alt(), name: "CSS3" },
   { comp: FaNodeJs(), name: "Node.js" },

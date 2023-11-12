@@ -3,7 +3,6 @@ import { FaPython, FaHtml5, FaCss3Alt, FaNodeJs } from "react-icons/fa";
 import {
   SiJavascript,
   SiTypescript,
-  SiSvelte,
   SiExpress,
   SiPostgresql,
   SiJupyter,
@@ -11,6 +10,7 @@ import {
   SiPlotly,
   SiScipy,
   SiNumpy,
+  SiSupabase,
 } from "react-icons/si";
 
 interface WorkItems {
@@ -27,18 +27,18 @@ const workItems: WorkItems[] = [
   {
     logo: linkHealth,
     companyName: "Link Health",
-    title: "Full Stack Web Developer Intern",
+    title: "Backend Developer Intern",
     location: "Boston, MA/Remote",
     date: "September 2023 - Present",
     description:
-      "We are developing a web application which will assist individuals in registering them for federal welfare programs! My responsibilities are focused in the middleware/routing and security. We are using Supabase on top of PostgreSQL for a fully built security system, and when individuals input their information, we will efficiently determine what programs they are eligible for and remotely register them for as many as possible.",
+      "We are developing a web application which will assist individuals in registering them for federal welfare programs! My responsibilities are focused in the middleware/routing and security. We are using Supabase on top of PostgreSQL for a fully built security system, and when individuals input their information, we will efficiently determine what programs they are eligible for and remotely register them for as many as possible. My work has included the implementation of BFS and DFS recursive algorithms to effectively determine eligibility and what questions to ask users",
     techs: [
       FaHtml5(),
       FaCss3Alt(),
       FaNodeJs(),
       SiJavascript(),
       SiTypescript(),
-      SiSvelte(),
+      SiSupabase(),
       SiPostgresql(),
       SiExpress(),
     ],
