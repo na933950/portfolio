@@ -7,6 +7,31 @@ export interface CourseworkObject {
 
 export const coursework: CourseworkObject[] = [
   {
+    code: "CS 170",
+    name: "Efficient Algorithms and Intractable Problems",
+    description:
+      "A proof-based course which inspires thought about efficient time and space complexity for common algorithms.",
+    skills: [
+      "ALgorithms",
+      "Data Structures",
+      "Proofs",
+      "Discrete Math",
+      "Probability Theory",
+    ],
+  },
+  {
+    code: "CS 61C",
+    name: "Great Ideas in Computer Architecture (Machine Structures)",
+    description: "A standard machine structures class taught in C",
+    skills: [
+      "Parallelism",
+      "Multithreading",
+      "Concurrency",
+      "Bitwise Operations",
+      "C",
+    ],
+  },
+  {
     code: "CS 61B",
     name: "Data Structures",
     description:
@@ -42,6 +67,13 @@ export const coursework: CourseworkObject[] = [
     description:
       "A tough but useful class with proofs in discrete math, combinatorics, probability theory, and more!",
     skills: ["Discrete Mathematics", "Probability Theory", "Proofs"],
+  },
+  {
+    code: "CS 1800",
+    name: "Intro to Artificial Intelligence",
+    description:
+      "An introduction to common artificial intelligence algorithms.",
+    skills: ["AI", "ML", "Algorithms", "Python"],
   },
   {
     code: "CS 61A",

@@ -10,7 +10,7 @@ const Education = () => {
           <h2>Education</h2>
           <h4>University of California, Berkeley</h4>
           <h5>
-            <g>GPA:</g> 4.0/4.0
+            <g>GPA:</g> 3.98/4.00
           </h5>
           <h5>
             <g>Recognitions:</g> Dean's List - College of Letters and Science
@@ -25,8 +25,9 @@ const Education = () => {
           <p>
             I also belong to the wonderful organization{" "}
             <a href="">Political Computer Science @ Berkeley</a> where I can
-            explore my interest in public policy. I am also the{" "}
-            <g>Education Chair</g> and am responsible for planning workshops!
+            explore my interest in public policy. I am the{" "}
+            <g>Projects Vice President</g> and am responsible for managing and
+            sourcing projects!
           </p>
         </div>
         <div className={styles.imgContainer}>
