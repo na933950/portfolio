@@ -1,11 +1,11 @@
 import { useState } from "react";
 import styles from "./Landing.module.css";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import MagicCard from "../../MagicCard";
 import { PiArrowFatLinesDownFill } from "react-icons/pi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiFileText } from "react-icons/fi";
 import resume from "../../resume.pdf";
+import AnimationBubbles from "../../AnimationBubbles";
 
 interface Props {
   scrollToAbout: () => void;
@@ -63,13 +63,32 @@ const Landing = ({ scrollToAbout }: Props) => {
               <Cursor></Cursor>
             </h2>
             <div className={styles.linksContainer}>
-              <a href="https://www.github.com/na933950" target="blank"><h4 className={styles.link}><FaGithub /></h4></a>
-              <a href="https://www.linkedin.com/in/noah-abji-418b7321b/" target="blank"><h4 className={styles.link}><FaLinkedin /></h4></a>
-              <a href={resume} target="blank"><h4 className={styles.link}><FiFileText /></h4></a>
+              <a href="https://www.github.com/na933950" target="blank">
+                <h4 className={styles.link}>
+                  <FaGithub />
+                </h4>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/noah-abji-418b7321b/"
+                target="blank"
+              >
+                <h4 className={styles.link}>
+                  <FaLinkedin />
+                </h4>
+              </a>
+              <a href={resume} target="blank">
+                <h4 className={styles.link}>
+                  <FiFileText />
+                </h4>
+              </a>
             </div>
           </div>
         </div>
-        {breakpoint < screenWidth ? <MagicCard></MagicCard> : null}
+        {breakpoint < screenWidth ? (
+          <div className={styles.bubbleContainer}>
+            {breakpoint < screenWidth ? <AnimationBubbles /> : null}
+          </div>
+        ) : null}
       </div>
       <div className={styles.downArrowContainer} onClick={scrollToAbout}>
         <h2 className={styles.textDownArrow}>
