@@ -400,9 +400,9 @@
 }
 
 .bubble7[data-layout="6"] {
-  left: 85%;
+  left: 80%;
   top: 70%;
-  width: 15%;
+  width: 20%;
   height: 30%;
   border-radius: 15rem;
   background-color: var(--primary);

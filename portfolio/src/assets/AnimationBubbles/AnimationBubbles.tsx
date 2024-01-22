@@ -4,10 +4,11 @@ import styles from "./AnimationBubbles.module.css";
 const AnimationBubbles = () => {
   const [dataLayout, setDataLayout] = useState(1);
   const dataLayoutLen = 6;
+  const [dataLayoutOrder, setDataLayoutOrder] = useState([1, 2, 3, 4, 5, 6]);
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
-      setDataLayout(getRandomInt(dataLayoutLen));
+      setDataLayout(getInfluencedInt);
     }, 4000);
 
     return () => clearInterval(intervalId); // Clear the interval on component unmount
@@ -20,6 +21,34 @@ const AnimationBubbles = () => {
     } else {
         return randNum;
     }
+  }
+
+  const getInfluencedInt = () => {
+    let counter = 0;
+    let idx = 0;
+
+    while (counter < 20) {
+
+        const randNum = Math.floor(Math.random() * 3);
+
+        if (randNum == 1) {
+            const newDataLayoutOrder = [];
+
+            for (let i = 0; i < dataLayoutOrder.length; i++) {
+                if (idx != i) {
+                    newDataLayoutOrder.push(dataLayoutOrder[i]);
+                }
+            }
+            newDataLayoutOrder.push(dataLayoutOrder[idx]);
+            const returnNum = dataLayoutOrder[idx]
+            setDataLayoutOrder(newDataLayoutOrder);
+            return returnNum;
+        } else {
+            counter += 1;
+            idx = (idx + 1) % 6
+        }
+    }
+    return dataLayoutOrder[idx]
   }
 
   return (
