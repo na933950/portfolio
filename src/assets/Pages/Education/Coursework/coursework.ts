@@ -7,6 +7,13 @@ export interface CourseworkObject {
 
 export const coursework: CourseworkObject[] = [
   {
+    code: "CS 161",
+    name: "Computer Security",
+    description:
+      "Advanced concepts in modern cybersecurity--both offense and defense",
+    skills: ["Cybersecurity", "Cryptography", "Memory", "C"],
+  },
+  {
     code: "CS 170",
     name: "Efficient Algorithms and Intractable Problems",
     description:
@@ -23,13 +30,14 @@ export const coursework: CourseworkObject[] = [
     code: "CS 61C",
     name: "Great Ideas in Computer Architecture (Machine Structures)",
     description: "A standard machine structures class taught in C",
-    skills: [
-      "Parallelism",
-      "Multithreading",
-      "Concurrency",
-      "Bitwise Operations",
-      "C",
-    ],
+    skills: ["Multithreading", "Concurrency", "C", "CPU", "Assembly"],
+  },
+  {
+    code: "CS 186",
+    name: "Introduction to Database Systems",
+    description:
+      "Modern theory in relational and post-relational databases and DBMS",
+    skills: ["Databases", "SQL", "DBMS", "Cache", "C"],
   },
   {
     code: "CS 61B",
@@ -69,7 +77,7 @@ export const coursework: CourseworkObject[] = [
     skills: ["Discrete Mathematics", "Probability Theory", "Proofs"],
   },
   {
-    code: "CS 1800",
+    code: "CS 188",
     name: "Intro to Artificial Intelligence",
     description:
       "An introduction to common artificial intelligence algorithms.",

@@ -18,7 +18,7 @@ const Footer = ({ pages, scrollTop }: Props) => {
     <div className={styles.container}>
         <div className={styles.personalContainer}>
             <h5 onClick={scrollTop}><b>Noah Abji</b></h5>
-            <p>CS @ UC Berkeley - 2025</p>
+            <p>CS @ UC Berkeley - 2026</p>
             <a href="mailto:noah.abji@gmail.com">noah.abji@gmail.com</a>
             <div className={styles.linksContainer}>
               <a href="https://www.github.com/na933950" target="blank"><h4 className={styles.link}><FaGithub /></h4></a>
