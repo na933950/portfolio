@@ -7,10 +7,10 @@ const Experience = () => {
     <div className={styles.container}>
       <h2>Experience</h2>
       <p>
-        I have experience as both a web developer and data scientist through my
-        work at Link Health! Through this work, I have been able to use my
-        technical skills to help Link Health--a Boston-based nonprofit
-        organization--distribute aid to underserved individuals.
+        I have valuable experience as both a Software Development Engineering Intern
+        at Amazon AGI, as well as a Web Developer and Data Scientist at Link Health.
+        Through these experience, I learned how to write readable, and well documented code
+        and picked up lots of new skills along the way!
       </p>
       <div className={styles.workItems}>
         {workItems.map((w) => (

@@ -3,7 +3,6 @@ import styles from "./AnimationBubbles.module.css";
 
 const AnimationBubbles = () => {
   const [dataLayout, setDataLayout] = useState(1);
-  const dataLayoutLen = 6;
   const [dataLayoutOrder, setDataLayoutOrder] = useState([1, 2, 3, 4, 5, 6]);
 
   useEffect(() => {
@@ -13,15 +12,6 @@ const AnimationBubbles = () => {
 
     return () => clearInterval(intervalId); // Clear the interval on component unmount
   }, []);
-
-  const getRandomInt = (max: number) => {
-    const randNum = Math.floor(Math.random() * max) + 1;
-    if (randNum === dataLayout) {
-        return ((randNum + 1) % max) + 1
-    } else {
-        return randNum;
-    }
-  }
 
   const getInfluencedInt = () => {
     let counter = 0;

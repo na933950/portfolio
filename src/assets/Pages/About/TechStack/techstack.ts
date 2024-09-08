@@ -6,6 +6,7 @@ import {
   FaCss3Alt,
   FaNodeJs,
 } from "react-icons/fa";
+import { FaC } from "react-icons/fa6";
 import {
   SiJavascript,
   SiTypescript,
@@ -19,6 +20,7 @@ import {
   SiNumpy,
 } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
+import { SiKotlin } from "react-icons/si";
 
 export interface TechStackObject {
   comp: React.ReactNode;
@@ -31,6 +33,8 @@ export const languages = [
   { comp: FaJava(), name: "Java" },
   { comp: SiTypescript(), name: "TypeScript" },
   { comp: BsFiletypeSql(), name: "SQL" },
+  { comp: FaC(), name: "C" },
+  { comp: SiKotlin(), name: "Kotlin" },
 ];
 
 export const webdev = [
