@@ -19,9 +19,9 @@ import {
   SiScipy,
   SiNumpy,
   SiSupabase,
-  SiKotlin
+  SiKotlin,
+  SiPython,
 } from "react-icons/si";
-
 
 interface WorkItems {
   logo: string;
@@ -36,7 +36,17 @@ interface WorkItems {
 const workItems: WorkItems[] = [
   {
     logo: amazon,
-    companyName: "Amazon",
+    companyName: "Amazon - Alexa Local Search",
+    title: "Software Development Engineering Intern",
+    location: "Sunnyvale, CA",
+    date: "May 2025 - August 2025",
+    description:
+      "I returned to Amazon AGI and interned on the Alexa Local Search Service team. My responsibilities included security assurance -- preparing the Alexa Plus service for security review, as well as using Native AWS services (NAWS) such as Virtual Private Cloud to protect OpenSearch and Sagemaker instances. Additionally, I decoupled pre-production and production stage resources to decrease the attackable surface area of our team's service. I wrote significant documentation on code best practices, testing, and runbooks for the newly updated service, and onboarded new hires onto the Alexa Plus version of Local Search.",
+    techs: [SiTypescript(), FaAws(), FaJava(), FaGit(), SiPython()],
+  },
+  {
+    logo: amazon,
+    companyName: "Amazon - Alexa Weather",
     title: "Software Development Engineering Intern",
     location: "Sunnyvale, CA",
     date: "May 2024 - August 2024",
