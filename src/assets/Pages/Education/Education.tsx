@@ -10,7 +10,7 @@ const Education = () => {
           <h2>Education</h2>
           <h4>University of California, Berkeley</h4>
           <h5>
-            <g>GPA:</g> 3.98/4.00
+            <g>GPA:</g> 3.97/4.00
           </h5>
           <h5>
             <g>Recognitions:</g> Dean's List - College of Letters and Science
@@ -18,7 +18,7 @@ const Education = () => {
           <p>
             I'm a Golden Bear! I attend the{" "}
             <b>University of California, Berkeley</b> and am currently in my
-            Junior year. I am studying <b>Computer Science</b>, but also love{" "}
+            Senior year and graduating in May 2026. I am studying <b>Computer Science</b>, but also love{" "}
             <g>Data Science</g>-- as shown through my projects, club, and
             coursework.
           </p>
